@@ -1,4 +1,4 @@
-import { Separator, StyleSheet, Text, View, TextInput, Button, FlatList } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TextInput, Button, FlatList } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
@@ -16,8 +16,8 @@ export default function App() {
   const [newGoal, setNewGoal] = useState("");
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Daily Focus Tracker</Text>
+    <SafeAreaView style={styles.container}>
+            <Text style={styles.title}>Daily Focus Tracker</Text>
       <View>
         <View style={styles.addCard}>
           <TextInput
@@ -48,7 +48,7 @@ export default function App() {
           )}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 20,
+    margin: "auto",
   },
   title: {
     fontSize: 24,
